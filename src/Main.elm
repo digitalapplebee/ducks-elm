@@ -112,7 +112,7 @@ viewGif model =
 getRandomduckGif : Cmd Msg
 getRandomduckGif =
   Http.get
-    { url = "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=duck"
+    { url = "https://api.giphy.com/v1/gifs/random?api_key=MNhcSEZv0DjNR8Ee16vMmsbAKcSCJ28t&tag=duck"
     , expect = Http.expectJson GotGif gifDecoder
     }
 

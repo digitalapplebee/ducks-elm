@@ -9,3 +9,9 @@
 ```bash
 elm reactor
 ```
+
+## Compile
+
+```bash
+elm make src/Main.elm
+```

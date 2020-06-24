@@ -80,7 +80,12 @@ subscriptions model =
 
 view : Model -> Html Msg
 view model =
-  div []
+  div [
+    style "display" "flex",
+    style "flex-direction" "column",
+    style "justify-content" "center",
+    style "align-items" "center"
+  ]
     [ h2 [] [ text "Random ducks" ]
     , viewGif model
     ]
@@ -99,8 +104,17 @@ viewGif model =
       text "Loading..."
 
     Success url ->
-      div []
-        [ button [ onClick MorePlease, style "display" "block" ] [ text "More Please!" ]
+      div [
+        style "display" "flex",
+        style "flex-direction" "column",
+            style "align-items" "center"
+      ]
+        [ button [ 
+          onClick MorePlease,
+          style "display" "block",
+          style "margin-bottom" "12px",
+          style "width" "200px"
+        ] [ text "More Please!" ]
         , img [ src url ] []
         ]
 
